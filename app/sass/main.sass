@@ -1,0 +1,505 @@
+
+@import "libs"
+@import "vars"
+
+
+/***********start vars**************/
+
+//  rt-shadow - red text shadow
+$rt-shadow: 0 0 2px #AD3D2B, 0 0 4px #AD3D2B, 0 0 6px #AD3D2B, 0 0 10px #AD3D2B, 0 0 15px #AD3D2B, 0 0 20px #AD3D2B, 0 0 25px #AD3D2B, 0 0 30px #AD3D2B
+
+/*  h-rt-shadow - hover red text shadow*/
+$h-rt-shadow: 0 0 1px #AD3D2B, 0 0 2px #AD3D2B, 0 0 4px #AD3D2B, 0 0 6px #AD3D2B, 0 0 8px #AD3D2B, 0 0 10px #AD3D2B, 0 0 14px #AD3D2B, 0 0 18px #AD3D2B, 0 0 24px #AD3D2B, 0 0 30px #AD3D2B, 0 0 35px #AD3D2B
+// rb-shadow - red box shadow, h-rb-shadow - hover red box shadow
+$rb-shadow: 0 0 5px 2px #CA4F1E, inset 0 0 5px 2px #CA4F1E
+$h-rb-shadow: 0 0 5px 8px #CA4F1E, inset 0 0 5px 8px #CA4F1E
+// bb-shadow - blue box shadow, h-bb-shadow - hover blue box shadow
+$bb-shadow: 0 0 10px 1px #81FBFF, inset 0 0 10px 3px #81FBFF
+$h-bb-shadow: 0 0 10px 5px #81FBFF, inset 0 0 10px 5px #81FBFF 
+// orange-red color
+$red: #AD3D2B
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+
+/***************HEADER*************/
+
+.header
+	display: grid
+	grid-template-columns: 1fr 8fr 1fr
+	height: 50px
+	font-family: 'Roboto Condensed', sans-serif
+	font-weight: light
+	font-size: 12px
+	background-color: #111111
+	.head-wrap
+		display: grid
+		grid-template-columns: 5fr 2fr 1fr 1fr
+		.top-mnu
+			font-size: 12px
+			ul
+				margin: 0
+				padding: 0
+				li
+					display: inline-block
+					margin: 11px 5px
+					color: #656666
+					&:hover
+						color: #E6E6E6
+						text-shadow: $rt-shadow
+		.byst-reg
+			margin: 11px 0
+			text-align: center
+			a
+				color: #ECAD6F
+				text-shadow: $rt-shadow
+				cursor: pointer
+				i
+					margin-right: 5px
+					color: #93FCFF
+					text-shadow: 0 0 3px blue, 0 0 6px blue, 0 0 12px #AD3D2B, 0 0 16px blue, 0 0 20px blue, 0 0 26px blue, 0 0 32px blue
+		.soc-link
+			a
+				i
+					font-size: 21px
+					margin: 10px 3px
+					color: #656666
+					cursor: pointer
+					&:hover
+						color: #e6e6e6
+		.lang
+			padding-top: 11px
+			display: grid
+			grid-template-columns: 2fr 2fr
+			justify-items: end
+			&:hover
+				cursor: pointer
+			.eng
+				font-size: 12px
+				color: #656666
+				margin-top:
+				padding: 0
+				span
+					&:hover
+						text-shadow: $rt-shadow
+						color: #fff
+				i
+					margin-left: 5px
+			.flag
+				background-image: url("../img/gb.png")
+				height: 20px
+				width: 20px
+				background-size: cover
+
+
+
+/***************TOP LOGO*************/
+
+.top-logo
+	background-image: url('../img/logo1.png')
+	background-color: #000
+	background-repeat: no-repeat
+	background-size: cover
+	height: 80px
+	margin-left: -100px
+	display: grid
+	justify-items: end
+	grid-template-columns:  1fr 4fr 4fr 1fr
+	.registr
+		border-radius: 5px
+		border: 2px solid #81FBFF
+		margin-top: 25px
+		padding: 0 16px
+		color: #81FBFF
+		background-color: rgba(0,0,255,0.5)
+		text-shadow: 0 0 5px #81FBFF
+		font-family: 'Roboto Condensed', sans-serif
+		font-weight: bold
+		font-size: 14px
+		box-shadow: $bb-shadow
+		&:hover
+			box-shadow: $h-bb-shadow
+	input
+		width: 110px
+		height: 26px
+		border: 0px
+		border-radius: 3px
+		background-color: #F1F0F0
+		font-family: 'Roboto Condensed', sans-serif
+		font-weight: light
+		font-style: italic
+		font-size: 12px
+		color: a2a1a1
+		margin: 3px
+		padding: 0 5px
+		&:first-of-type
+			margin-left: 15px
+		&:last-of-type
+			margin-right: 15px
+
+	.login
+		border-radius: 5px
+		border: 2px solid #FFCE81
+		margin-top: 25px
+		padding: 0 16px
+		color: #FFCE81
+		background-color: rgba(156,46,2,0.7)
+		text-shadow: 0 0 5px #CA4F1E
+		font-family: 'Roboto Condensed', sans-serif
+		font-weight: bold
+		font-size: 14px
+		box-shadow: $rb-shadow
+		&:hover
+			box-shadow: $h-rb-shadow
+
+
+/***************SLIDER*************/
+
+.slider
+	background-image: url('../img/background-logo.png')
+	background-size: cover
+	height: 380px
+	background-repeat: no-repeat
+	display: grid
+	grid-template-columns: 1fr 8fr 1fr
+	.slider-wrap
+		background-image: url('../img/big-logo.png')
+		background-repeat: no-repeat
+		background-size: 100%
+
+
+/***************BOTTOM MENU*************/
+
+.bottom-mnu
+	background-image: url('../img/background-bottom-mnu.png')
+	background-repeat: no-repeat
+	background-size: cover
+	height: 120px
+	display: grid
+	grid-template-columns: 1fr 4fr 4fr 1fr
+	margin-top: -14px
+	.b1
+		position: relative
+		overflow: hidden
+		.winner-text
+			margin-left: 10px
+		.owl-carousel
+			position: absolute
+			width: 100%
+			.owl-nav
+				position: absolute
+				top: 10px
+				width: 100%
+				> div
+					height: 20px
+					width: 20px
+					position: absolute
+					margin-left: 5px
+				i
+					text-shadow: $rt-shadow
+					color: $red
+					font-size: 28px
+					&:hover
+						text-shadow: $h-rt-shadow
+				.owl-next
+					right: 20px
+					left: auto
+			.disabled
+				display: inline-block
+			.owl-stage
+				width: 100% 
+			.owl-wrap
+				height: 60px
+				width: 140px
+				padding-top: 5px
+				cursor: pointer
+				p
+					color: #E1CE72
+					margin: 0 0 0 80px
+					padding: 0
+					font-family: 'Roboto Condensed', sans-serif
+					font-size: 12px
+					font-weight: bold
+					line-height: 1.1
+					&:first-of-type
+						font-size: 14px
+						color: #fff
+					&:last-of-type
+						font-size: 10px
+						font-weight: regular
+						color: #fff
+				.img-win
+					height: 38px
+					width: 75px
+					float: left
+					background-color: #fff
+					&:hover
+						box-shadow: 0 0 7px 2px #fff
+	.b2
+		.jackpot-wrap
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr
+			font-family: 'Ubuntu', sans-serif
+			font-weight: bold
+			font-size: 22px
+			margin-top: 5px
+			.gold-wrap
+				p
+					margin: 0 0 0 45px
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,123,15,1)), color-stop(50%, rgba(255,255,0,1)), color-stop(100%, rgba(255,101,5,1)))
+					-webkit-background-clip: text
+					color: transparent
+				.gold
+					background-image: url('../img/1COIN.png')
+			.silver-wrap
+				p
+					margin: 0 0 0 45px
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(20,20,20,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(31,31,31,1)))
+					-webkit-background-clip: text
+					color: transparent
+				.silver
+					background-image: url('../img/2COIN.png')
+			.bronze-wrap
+				p
+					margin: 0 0 0 45px
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,21,0,1)), color-stop(50%, rgba(255,154,77,1)), color-stop(100%, rgba(255,0,0,1)))
+					-webkit-background-clip: text
+					color: transparent
+
+				.bronze
+					background-image: url('../img/3COIN.png')
+
+
+
+.medal
+	height: 38px
+	width: 38px
+	float: left
+	background-size: cover
+	border: 0px solid #fff
+	border-radius: 50%
+	box-shadow: 0 0 5px 2px #fff
+
+.last-winners
+	color: #FFCE81
+	font-family: 'Roboto Condensed', sans-serif
+	font-size: 15px
+	margin-top: 22px
+	.winner-text
+		text-shadow: $rt-shadow
+
+
+/***************GAMES*************/
+
+.games-wrap
+	background-image: url('../img/pattern.png')
+	z-index: 2
+	margin-top: -10px
+	display: grid
+	grid-template-rows: 54px 35px 
+	.game-mnu
+		display: grid
+		grid-template-columns: 1fr 8fr 1fr
+		padding-top: 10px
+		.type-wrap
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+			grid-column-gap: 38px
+			justify-content: space-between
+			.type-game
+				border: 1px solid #FFCE82
+				border-radius: 3px
+				width: 180px
+				height: 36px
+				box-shadow: $rb-shadow
+				font-family: 'Roboto Condensed', sans-serif
+				font-size: 14px
+				text-shadow: $rt-shadow
+				padding-top: 2px
+				text-align: center
+				position: relative
+				&:hover
+					cursor: pointer
+					background-image: url(../img/hover.png)
+				a
+					text-decoration: none
+					color: #FFCE81
+					.game-text
+						position: absolute
+						margin-left: auto
+						margin-right: auto
+						left: 0
+						right: 0
+						margin-top: 4px
+						span
+					.img-game
+						width: 35px
+						height: 35px
+						background-repeat: no-repeat
+						display: block
+						position: absolute
+						margin-top: -2px
+					.game-1
+						background-image: url('../img/popular.png')
+						margin-left: 25px
+					.game-2
+						background-image: url('../img/new.png')
+						margin-left: 40px
+					.game-3
+						background-image: url('../img/slot.png')
+						margin-left: 11px
+					.game-4
+						background-image: url('../img/cart.png')
+						margin-left: 11px
+					.game-5
+						background-image: url('../img/roulette.png')
+						margin-left: 23px
+	.a-z
+		display: grid
+		grid-template-columns: 1fr 8fr 1fr
+		padding-top: 5px
+		.sort-wrap
+			display: grid
+			grid-template-columns: 1fr 4fr
+			.sort
+				font-size: 12px
+				margin-top: -8px
+				color: #fff
+				a
+					font-family: 'Roboto Condensed', sans-serif
+					font-weight: bold
+					margin: 0 5px
+					color: #fff
+					cursor: pointer
+			.search
+				justify-self: end
+				input
+					width: 200px
+					height: 30px
+					border: 1px solid #89FBFF
+					background-color: black
+					padding-left: 7px
+					font-weight: light
+					font-style: italic
+					font-size: 12px
+					box-shadow: $bb-shadow
+				i
+					text-shadow: $rt-shadow
+					color: #FFCE81
+					margin-left: -30px
+					&:hover
+						cursor: pointer
+	.games-box
+		display: grid
+		grid-template-columns: 1fr 8fr 1fr
+		.wrap-box
+			display: grid
+			grid-template-columns: repeat(5, [col] 1fr)
+			grid-template-rows: repeat(5, [row] 1fr)
+			justify-content: space-between
+			grid-gap: 10px
+			.box
+				width: 100%
+				font-size: 12px
+				a
+					color: #fff
+					cursor: pointer
+					text-decoration: none
+					&:hover
+						.black-bg
+							background: rgba(0, 0, 0, 0.8)
+							box-shadow: $bb-shadow
+							button
+								visibility: visible
+				.black-bg
+					min-height: 125px
+					width: 92%
+					padding-top: 25px
+					button
+						visibility: hidden
+						font-weight: bold
+						font-size: 14px
+						border-radius: 3px
+						border: 2px solid #81FBFF
+						padding: 0 20px
+						color: #81FBFF
+						display: block
+						margin-left: auto
+						margin-right: auto
+						background-color: rgba(0,0,255,0.5)
+						box-shadow: $bb-shadow
+						text-shadow: 0 0 5px #81FBFF
+						&:hover
+							box-shadow: $h-bb-shadow
+						&:last-of-type
+							border: 2px solid #FFCE81
+							color: #FFCE81
+							margin-top: 10px
+							background-color: rgba(156,46,2,0.7)
+							box-shadow: $rb-shadow
+							text-shadow: 0 0 5px #CA4F1E
+							&:hover
+								box-shadow: $h-rb-shadow
+
+				.game-name
+					background-repeat: no-repeat
+					min-height: 125px
+				.lucky
+					background-image: url('../img/lucky.png')
+				.anubis
+					background-image: url('../img/anubis.png')
+				.dream
+					background-image: url('../img/dream.png')
+				.submarine
+					background-image: url('../img/submarine.png')
+				.money
+					background-image: url('../img/money.png')
+			.box-1
+				grid-column: col 4 / span 2
+				grid-row: row 1 / span 2
+				background-color: #fff
+
+
+
+
+
+@import "media"
